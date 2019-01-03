@@ -14,6 +14,9 @@
 
 // general
 #include <stdint.h>               // needed for uin8_t, uint16_t
+#include <stdlib.h>
+#include <float.h>
+#include <math.h>
 #include "toolchain_defs.h"
 #include "board_info.h"
 
