@@ -163,7 +163,7 @@
       <name>ICCARM</name>
       <archiveVersion>2</archiveVersion>
       <data>
-        <version>29</version>
+        <version>30</version>
         <wantNonLocal>1</wantNonLocal>
         <debug>1</debug>
         <option>
@@ -229,7 +229,7 @@
         <option>
           <name>CCAllowList</name>
           <version>1</version>
-          <state>0000000</state>
+          <state>00000000</state>
         </option>
         <option>
           <name>CCDebugInfo</name>
@@ -409,6 +409,11 @@
         </option>
         <option>
           <name>CCNoLiteralPool</name>
+          <state>0</state>
+        </option>
+        <option>
+          <name>CCOptStrategySlave</name>
+          <version>0</version>
           <state>0</state>
         </option>
       </data>
@@ -1108,7 +1113,7 @@
       <name>ICCARM</name>
       <archiveVersion>2</archiveVersion>
       <data>
-        <version>29</version>
+        <version>30</version>
         <wantNonLocal>1</wantNonLocal>
         <debug>0</debug>
         <option>
@@ -1174,7 +1179,7 @@
         <option>
           <name>CCAllowList</name>
           <version>1</version>
-          <state>1111111</state>
+          <state>11111110</state>
         </option>
         <option>
           <name>CCDebugInfo</name>
@@ -1341,6 +1346,11 @@
         </option>
         <option>
           <name>CCNoLiteralPool</name>
+          <state>0</state>
+        </option>
+        <option>
+          <name>CCOptStrategySlave</name>
+          <version>0</version>
           <state>0</state>
         </option>
       </data>
@@ -2141,7 +2151,7 @@
           <name>$PROJ_DIR$\..\..\..\bsp\boards\openmote-cc2538\adc_sensor.h</name>
         </file>
         <file>
-          <name>$PROJ_DIR$\..\..\..\bsp\boards\OpenMote-CC2538\board.c</name>
+          <name>$PROJ_DIR$\..\..\..\bsp\boards\openmote-cc2538\board.c</name>
         </file>
         <file>
           <name>$PROJ_DIR$\..\..\..\bsp\boards\openmote-cc2538\board_info.h</name>
