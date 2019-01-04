@@ -17,16 +17,19 @@
 
 The superframe reappears over time and can be arbitrarily long.
 */
-#define SLOTFRAME_LENGTH    11 //should be 101
+#define SLOTFRAME_LENGTH    23 //should be 101
 
 //draft-ietf-6tisch-minimal-06
-#define SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS                      1
+#define SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS                      5
 #define SCHEDULE_MINIMAL_6TISCH_SLOTOFFSET                        0
 #define SCHEDULE_MINIMAL_6TISCH_CHANNELOFFSET                     0
 #define SCHEDULE_MINIMAL_6TISCH_DEFAULT_SLOTFRAME_HANDLE          1 //id of slotframe
 #define SCHEDULE_MINIMAL_6TISCH_DEFAULT_SLOTFRAME_NUMBER          1 //1 slotframe by default.
 
 #define NUMSERIALRX          3
+
+//TAMU-RPL
+#define NUM_SLOTS_TAMU       1  // these slots are used to calculate the prefered parent (it takes some time)
 
 /*
   NUMSLOTSOFF is the max number of cells that the mote can add into schedule, 
@@ -39,7 +42,7 @@ The superframe reappears over time and can be arbitrarily long.
   for serial port to transmit data to dagroot.
 */
 
-#define NUMSLOTSOFF          5
+#define NUMSLOTSOFF          1
 
 /**
 \brief Maximum number of active slots in a superframe.
@@ -51,7 +54,7 @@ in that table; a slot is "active" when it is not of type CELLTYPE_OFF.
 Set this number to the exact number of active slots you are planning on having
 in your schedule, so not to waste RAM.
 */
-#define MAXACTIVESLOTS       (SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS+NUMSERIALRX+NUMSLOTSOFF)
+#define MAXACTIVESLOTS       (SCHEDULE_MINIMAL_6TISCH_ACTIVE_CELLS+NUMSERIALRX+NUMSLOTSOFF+NUM_SLOTS_TAMU)
 
 /**
 \brief Minimum backoff exponent.
@@ -95,7 +98,8 @@ typedef enum {
    CELLTYPE_RX               = 2,
    CELLTYPE_TXRX             = 3,
    CELLTYPE_SERIALRX         = 4,
-   CELLTYPE_MORESERIALRX     = 5
+   CELLTYPE_MORESERIALRX     = 5,
+   CELLTYPE_TAMURPL          = 6
 } cellType_t;
 
 typedef struct {

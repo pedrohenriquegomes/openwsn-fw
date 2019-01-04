@@ -1004,6 +1004,9 @@ port_INLINE void activity_ti1ORri1() {
       case CELLTYPE_MORESERIALRX:
          // do nothing (not even endSlot())
          break;
+      case CELLTYPE_TAMURPL:
+         // do nothing (not even endSlot())
+         break;
       default:
          // stop using serial
          openserial_stop();

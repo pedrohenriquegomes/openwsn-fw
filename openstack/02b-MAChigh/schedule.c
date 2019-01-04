@@ -55,6 +55,17 @@ void schedule_init() {
          &temp_neighbor                         // neighbor
       );
    }
+   
+   // TAMU-RPL slots for preferred parent calculation
+   for (;running_slotOffset<start_slotOffset+NUMSERIALRX+NUM_SLOTS_TAMU;running_slotOffset++) {
+      schedule_addActiveSlot(
+         running_slotOffset,                    // slot offset
+         CELLTYPE_TAMURPL,                 // type of slot (temporarily uses CELLTYPE_MORESERIALRX to not break openvisualizer)
+         FALSE,                                 // shared?
+         0,                                     // channel offset
+         &temp_neighbor                         // neighbor
+      );
+   }
 }
 
 /**
